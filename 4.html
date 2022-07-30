@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg) rotateY(-80deg);
+        position: relative;
+        margin: 200px auto;
+        animation: rotate linear 20s infinite;
+    }
+
+    @-webkit-keyframes rotate {
+        from {
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+
+        to {
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }
+
+    .content div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        opacity: .8;
+    }
+
+    .content>div>img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .content .top {
+        transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .content .left {
+        transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .content .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .content .right {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .content .front {
+        transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .content .after {
+        transform: translateZ(-100px) rotateY(180deg);
+    }
+</style>
+
+<body>
+    <div class="content">
+        <!-- <div class="top"><img src="./imgs/1.jpg"></div>
+        <div class="bottom"><img src="./imgs/2.jpg"></div>
+        <div class="left"><img src="./imgs/3.jpg"></div>
+        <div class="right"><img src="./imgs/4.jpg"></div>
+        <div class="front"><img src="./imgs/5.jpg"></div>
+        <div class="after"><img src="./imgs/6.jpg"></div> -->
+        <div class="top"><img src="https://cdn.pixabay.com/photo/2022/07/25/10/19/mountain-7343375__340.jpg"></div>
+        <div class="bottom"><img src="https://cdn.pixabay.com/photo/2022/07/18/19/57/dog-7330712__340.jpg"></div>
+        <div class="left"><img src="https://cdn.pixabay.com/index/2022/07/21/13-19-24-950_640.jpg"></div>
+        <div class="right"><img src="https://cdn.pixabay.com/photo/2020/04/30/03/26/rufous-5111261__340.jpg"></div>
+        <div class="front"><img src="https://cdn.pixabay.com/photo/2022/05/31/18/12/flowers-7233987__340.jpg"></div>
+        <div class="after"><img src="https://cdn.pixabay.com/photo/2022/07/11/05/39/goose-7314199__340.jpg"></div>
+    </div>
+</body>
+</html>
